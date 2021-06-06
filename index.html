@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket match</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(32, 32, 32);
+        }
+        .stadium {
+            position: relative;
+            width: 1000px;
+            height: 570px;
+            z-index: 999;
+            border: 8px groove black;
+        }
+        .stadium img {
+            width: 984px;
+        }
+        .bat {
+            position: absolute;
+            left: 132px;
+            bottom: 135px;
+            animation: bat 1s ease 1.6s 1;
+            -webkit-animation: bat 1s ease 1.6s 1;
+            z-index: 999;
+        }
+        .bat img {
+            width: 36px;
+        }
+        @keyframes bat {
+            0% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(41deg);
+                -webkit-transform: rotate(41deg);
+                -moz-transform: rotate(41deg);
+                -ms-transform: rotate(41deg);
+                -o-transform: rotate(41deg);
+            }
+            100% {
+                transform: rotate(-41deg);
+                -webkit-transform: rotate(-41deg);
+                -moz-transform: rotate(-41deg);
+                -ms-transform: rotate(-41deg);
+                -o-transform: rotate(-41deg);
+                left: 140px;
+                bottom: 142px;
+            }
+        }
+        @-webkit-keyframes bat {
+            0% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(41deg);
+                -webkit-transform: rotate(41deg);
+                -moz-transform: rotate(41deg);
+                -ms-transform: rotate(41deg);
+                -o-transform: rotate(41deg);
+            }
+            100% {
+                transform: rotate(-41deg);
+                -webkit-transform: rotate(-41deg);
+                -moz-transform: rotate(-41deg);
+                -ms-transform: rotate(-41deg);
+                -o-transform: rotate(-41deg);
+                left: 140px;
+                bottom: 142px;
+            }
+        }
+        .batsman {
+            position: absolute;
+            left: 152px;
+            bottom: 141px;
+        }
+        .batsman img {
+            width: 72px;
+        }
+        .ball {
+            position: absolute;
+            right: 151px;
+            bottom: 157px;
+            animation: ball 4s ease-in 1;
+            -webkit-animation: ball 4s ease-in 1;
+        }
+        .ball img {
+            width: 14px;
+        }
+        @keyframes ball {
+            0% {
+                right: -47px;
+                bottom: 157px; 
+            }
+            25% {
+                right: 151px;
+                bottom: 157px;
+            }
+            40% {
+                right: 600px;
+                bottom: 140px;
+            }
+            50% {
+                right: 819px;
+                bottom: 159px;
+            }
+            50.3% {
+                right: 816px;
+                bottom: 163px;
+            }
+            100% {
+                right: -1800px;
+                bottom: 763px;
+            }
+        }
+        @-webkit-keyframes ball {
+            0% {
+                right: -47px;
+                bottom: 157px; 
+            }
+            25% {
+                right: 151px;
+                bottom: 157px;
+            }
+            40% {
+                right: 600px;
+                bottom: 140px;
+            }
+            50% {
+                right: 819px;
+                bottom: 159px;
+            }
+            50.3% {
+                right: 816px;
+                bottom: 163px;
+            }
+            100% {
+                right: -1800px;
+                bottom: 763px;
+            }
+        }
+        .bowler {
+            position: absolute;
+            right: 99px;
+            bottom: 125px;
+            animation: bowler 1s ease-in 1;
+            -webkit-animation: bowler 1s ease-in 1;
+        }
+        .bowler img {
+            width: 60px;
+        }
+        @keyframes bowler {
+            0% {right: -100px;}
+            100% {right: 99px;}
+        }
+        @-webkit-keyframes bowler {
+            0% {right: -100px;}
+            100% {right: 99px;}
+        }
+        .play {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            font-size: 25px;
+            background-color: white;
+            color: black;
+            padding: 7px 31px;
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="stadium">
+            <img src="images/stadium.jpg" alt="stadium">
+            <div class="bat">
+                <img src="images/bat.png" alt="Bat">
+            </div>
+            <div class="batsman">
+                <img src="images/Batsman.png" alt="Batsman">
+            </div>
+            <div class="ball">
+                <img src="images/ball.png" alt="Ball">
+            </div>
+            <div class="bowler">
+                <img src="images/bowler.png" alt="Bowler">
+            </div>
+            <button class="play" onclick="play();">Play</button>
+        </div>
+    </main>
+    <script>
+        function play() {
+            self.location = "index.html";
+        }
+    </script>
+</body>
+</html>
